@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30 ??? 2017 8:37:41 ?? by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Dromologio" table="dromologio" catalog="kteldb" optimistic-lock="version">
+        <id name="dromologioId" type="java.lang.Integer">
+            <column name="dromologio_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="bus" class="model.Bus" fetch="select">
+            <column name="bus_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="cityByCityIdAnaxorisi" class="model.City" fetch="select">
+            <column name="city_id_anaxorisi" not-null="true" />
+        </many-to-one>
+        <many-to-one name="cityByCityIdAfiksi" class="model.City" fetch="select">
+            <column name="city_id_afiksi" not-null="true" />
+        </many-to-one>
+        <property name="dromologioDate" type="date">
+            <column name="dromologio_date" length="10" not-null="true" />
+        </property>
+        <property name="dromologioTimeAnaxorisi" type="timestamp">
+            <column name="dromologio_time_anaxorisi" length="19" not-null="true" />
+        </property>
+        <property name="dromologioTimeAfiksi" type="timestamp">
+            <column name="dromologio_time_afiksi" length="19" not-null="true" />
+        </property>
+        <property name="dromologioTypeDromologio" type="string">
+            <column name="dromologio_type_dromologio" length="45" not-null="true" />
+        </property>
+        <property name="dromologioPrice" type="string">
+            <column name="dromologio_price" length="45" not-null="true" />
+        </property>
+        <set name="tickets" table="ticket" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="dromologio_id" not-null="true" />
+            </key>
+            <one-to-many class="model.Ticket" />
+        </set>
+        <set name="demas" table="dema" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="dromologio_id" not-null="true" />
+            </key>
+            <one-to-many class="model.Dema" />
+        </set>
+    </class>
+</hibernate-mapping>

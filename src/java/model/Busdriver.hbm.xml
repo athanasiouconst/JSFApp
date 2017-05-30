@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30 ??? 2017 8:37:41 ?? by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Busdriver" table="busdriver" catalog="kteldb" optimistic-lock="version">
+        <id name="busdriverId" type="java.lang.Integer">
+            <column name="busdriver_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="bus" class="model.Bus" fetch="select">
+            <column name="bus_id" not-null="true" />
+        </many-to-one>
+        <property name="busdriverLastname" type="string">
+            <column name="busdriver_lastname" length="45" not-null="true" />
+        </property>
+        <property name="busdriverFirstname" type="string">
+            <column name="busdriver_firstname" length="45" not-null="true" />
+        </property>
+        <property name="busdriverAdt" type="string">
+            <column name="busdriver_adt" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="busdriverAfm" type="int">
+            <column name="busdriver_afm" not-null="true" unique="true" />
+        </property>
+        <property name="busdriverArithmosDiplomatos" type="string">
+            <column name="busdriver_arithmos_diplomatos" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="busdriverPhone" type="string">
+            <column name="busdriver_phone" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="busdriverAddress" type="string">
+            <column name="busdriver_address" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

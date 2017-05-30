@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30 ??? 2017 8:37:41 ?? by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Dema" table="dema" catalog="kteldb" optimistic-lock="version">
+        <id name="demaId" type="java.lang.Integer">
+            <column name="dema_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="dromologio" class="model.Dromologio" fetch="select">
+            <column name="dromologio_id" not-null="true" />
+        </many-to-one>
+        <property name="demaDateApostoli" type="date">
+            <column name="dema_date_apostoli" length="10" not-null="true" />
+        </property>
+        <property name="demaLastnameApostolea" type="string">
+            <column name="dema_lastname_apostolea" length="45" not-null="true" />
+        </property>
+        <property name="demaFirstnameApostolea" type="string">
+            <column name="dema_firstname_apostolea" length="45" not-null="true" />
+        </property>
+        <property name="demaLastnameParalipti" type="string">
+            <column name="dema_lastname_paralipti" length="45" not-null="true" />
+        </property>
+        <property name="demaFirstnameParalipti" type="string">
+            <column name="dema_firstname_paralipti" length="45" not-null="true" />
+        </property>
+        <property name="demaTemaxia" type="int">
+            <column name="dema_temaxia" not-null="true" />
+        </property>
+        <property name="demaBaros" type="string">
+            <column name="dema_baros" length="45" not-null="true" />
+        </property>
+        <property name="demaPrice" type="string">
+            <column name="dema_price" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

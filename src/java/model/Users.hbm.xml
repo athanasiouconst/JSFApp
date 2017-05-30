@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30 ??? 2017 8:37:41 ?? by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Users" table="users" catalog="kteldb" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="roles" class="model.Roles" fetch="select">
+            <column name="roles_id" not-null="true" />
+        </many-to-one>
+        <property name="userLastname" type="string">
+            <column name="user_lastname" length="45" not-null="true" />
+        </property>
+        <property name="userFirstname" type="string">
+            <column name="user_firstname" length="45" not-null="true" />
+        </property>
+        <property name="userAdt" type="string">
+            <column name="user_adt" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="userAfm" type="int">
+            <column name="user_afm" not-null="true" unique="true" />
+        </property>
+        <property name="userPhone" type="string">
+            <column name="user_phone" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="userAddress" type="string">
+            <column name="user_address" length="45" not-null="true" />
+        </property>
+        <property name="userEmail" type="string">
+            <column name="user_email" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="userUsername" type="string">
+            <column name="user_username" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="userPassword" type="string">
+            <column name="user_password" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
