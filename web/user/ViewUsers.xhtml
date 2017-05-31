@@ -114,7 +114,7 @@
 
             </p:dataTable>
 
-            
+
 
             <!-- παραθυρο για προβολη -->
             <p:dialog header="ΠΡΟΒΟΛΗ" widgetVar="ViewDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
@@ -201,7 +201,7 @@
             </p:dialog>
 
         </h:form>
-        
+
         <h:form id="insertForm">
             <!-- παραθυρο για εισαγωγη φορμας-->
             <p:dialog header="ΕΙΣΑΓΩΓΗ" widgetVar="InsertDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
@@ -213,20 +213,20 @@
                         <h:inputText id="userLastname" value="#{usersManagedBean.usersToInsert.userLastname}" 
                                      required="true" requiredMessage="ΤΟ ΠΕΔΙΟ ΕΠΙΘΕΤΟ ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"/>
                         <p:message for="userLastname" />
-                        <h:outputText value="#{usersManagedBean.usersToInsert.userLastname}" />
+                        <h:outputText  />
 
                         <h:outputText value="ΟΝΟΜΑ" />
                         <h:inputText  id="userFirstname" value="#{usersManagedBean.usersToInsert.userFirstname}"
                                       required="true" requiredMessage="ΤΟ ΠΕΔΙΟ ΟΝΟΜΑ ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"/>
                         <p:message for="userFirstname" />
-                        <h:outputText value="#{usersManagedBean.usersToInsert.userFirstname}" />
+                        <h:outputText  />
 
 
                         <h:outputText value="Α.Δ.Τ" />
                         <h:inputText  id="userAdt" value="#{usersManagedBean.usersToInsert.userAdt}" 
                                       required="true" requiredMessage="ΤΟ ΠΕΔΙΟ Α.Δ.Τ ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"/>
                         <p:message for="userAdt" />
-                        <h:outputText value="#{usersManagedBean.usersToInsert.userAdt}" />
+                        <h:outputText  />
 
 
                         <h:outputText value="Α.Φ.Μ" />
@@ -234,50 +234,44 @@
                                       required="true" requiredMessage="ΤΟ ΠΕΔΙΟ Α.Φ.Μ ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"
                                       mask="999999999"/>
                         <p:message for="userAfm" />
-<!--                        <h:outputText value="#{usersManagedBean.usersToInsert.userAfm}" />-->
-
+                        <h:outputText  />
                         <h:outputText value="ΤΗΛΕΦΩΝΟ" />
                         <p:inputMask  id="userPhone" value="#{usersManagedBean.usersToInsert.userPhone}" 
                                       required="true" requiredMessage="ΤΟ ΠΕΔΙΟ ΤΗΛΕΦΩΝΟ ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"
                                       mask="999-9999999"/>
                         <p:message for="userPhone" />
-                        <h:outputText value="#{usersManagedBean.usersToInsert.userPhone}" />
-
+                        <h:outputText  />
                         <h:outputText value="ΔΙΕΥΘΥΝΣΗ" />
                         <h:inputText  id="userAddress" value="#{usersManagedBean.usersToInsert.userAddress}"
                                       required="true" requiredMessage="ΤΟ ΠΕΔΙΟ ΔΙΕΥΘΥΝΣΗ ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"/>
                         <p:message for="userAddress" />
-                        <h:outputText value="#{usersManagedBean.usersToInsert.userAddress}" />
-
+                        <h:outputText  />
                         <h:outputText value="E-MAIL" />
                         <h:inputText  id="userEmail" value="#{usersManagedBean.usersToInsert.userEmail}" 
                                       required="true" requiredMessage="ΤΟ ΠΕΔΙΟ E-MAIL ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"/>
                         <p:message for="userEmail" />
-                        <h:outputText value="#{usersManagedBean.usersToInsert.userEmail}" />
-
+                        <h:outputText  />
                         <h:outputText value="USERNAME" />
                         <h:inputText  id="userUsername" value="#{usersManagedBean.usersToInsert.userUsername}" 
                                       required="true" requiredMessage="ΤΟ ΠΕΔΙΟ USERNAME ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"/>
                         <p:message for="userUsername" />
-                        <h:outputText value="#{usersManagedBean.usersToInsert.userUsername}" />
-
+                        <h:outputText  />
                         <h:outputText value="PASSWORD" />
                         <h:inputText  id="userPassword" value="#{usersManagedBean.usersToInsert.userPassword}"
                                       required="true" requiredMessage="ΤΟ ΠΕΔΙΟ PASSWORD ΕΙΝΑΙ ΥΠΟΧΡΕΩΤΙΚΟ"/>
                         <p:message for="userPassword" />
-                        <h:outputText value="#{usersManagedBean.usersToInsert.userPassword}" />
-
+                        <h:outputText  />
                         <h:outputText value="ΡΟΛΟΣ" />
                         <p:selectOneMenu id="advanced" value="#{usersManagedBean.rolesString}"  panelStyle="width:180px"
                                          effect="fade" var="t" style="width:160px" filter="true" filterMatchMode="startsWith"  
                                          required="true" requiredMessage="Η επιλογή Ρόλου είναι υποχρεωτική">
                             <f:selectItems value="#{usersManagedBean.roles}" var="roles" itemLabel="#{roles.roleName}" itemValue="#{roles.roleName}" />
 
-                            
+
                         </p:selectOneMenu>
 
                         <p:commandButton update=":form " icon="ui-icon-search" value="ΕΙΣΑΓΩΓΗ" actionListener="#{usersManagedBean.insert()}" 
-                                          validateClient="true"/>
+                                         validateClient="true"/>
 
                     </p:panelGrid>
                 </p:outputPanel>
