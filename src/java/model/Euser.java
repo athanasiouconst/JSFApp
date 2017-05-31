@@ -55,42 +55,7 @@ public class Euser  implements java.io.Serializable {
         this.euserEmail = euserEmail;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + Objects.hashCode(this.euserId);
-        hash = 79 * hash + Objects.hashCode(this.euserUsername);
-        hash = 79 * hash + Objects.hashCode(this.euserPassword);
-        hash = 79 * hash + Objects.hashCode(this.euserEmail);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Euser other = (Euser) obj;
-        if (!Objects.equals(this.euserUsername, other.euserUsername)) {
-            return false;
-        }
-        if (!Objects.equals(this.euserPassword, other.euserPassword)) {
-            return false;
-        }
-        if (!Objects.equals(this.euserEmail, other.euserEmail)) {
-            return false;
-        }
-        if (!Objects.equals(this.euserId, other.euserId)) {
-            return false;
-        }
-        return true;
-    }
+   
 
     @Override
     public String toString() {

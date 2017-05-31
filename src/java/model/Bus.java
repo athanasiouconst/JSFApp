@@ -89,54 +89,7 @@ public class Bus  implements java.io.Serializable {
         this.dromologios = dromologios;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 23 * hash + Objects.hashCode(this.busId);
-        hash = 23 * hash + Objects.hashCode(this.busArithmosKikloforias);
-        hash = 23 * hash + this.busArithmosTheseon;
-        hash = 23 * hash + Objects.hashCode(this.busTypebus);
-        hash = 23 * hash + Objects.hashCode(this.busXoritikotitaDematon);
-        hash = 23 * hash + Objects.hashCode(this.busdrivers);
-        hash = 23 * hash + Objects.hashCode(this.dromologios);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Bus other = (Bus) obj;
-        if (this.busArithmosTheseon != other.busArithmosTheseon) {
-            return false;
-        }
-        if (!Objects.equals(this.busArithmosKikloforias, other.busArithmosKikloforias)) {
-            return false;
-        }
-        if (!Objects.equals(this.busTypebus, other.busTypebus)) {
-            return false;
-        }
-        if (!Objects.equals(this.busXoritikotitaDematon, other.busXoritikotitaDematon)) {
-            return false;
-        }
-        if (!Objects.equals(this.busId, other.busId)) {
-            return false;
-        }
-        if (!Objects.equals(this.busdrivers, other.busdrivers)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologios, other.dromologios)) {
-            return false;
-        }
-        return true;
-    }
+    
 
     @Override
     public String toString() {

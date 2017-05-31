@@ -81,55 +81,7 @@ public class Ticket  implements java.io.Serializable {
         this.ticketPrice = ticketPrice;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.ticketId);
-        hash = 59 * hash + Objects.hashCode(this.dromologio);
-        hash = 59 * hash + Objects.hashCode(this.ticketType);
-        hash = 59 * hash + Objects.hashCode(this.ticketTypeEkptosi);
-        hash = 59 * hash + Objects.hashCode(this.ticketDateEkdosi);
-        hash = 59 * hash + Objects.hashCode(this.ticketCategoryEkdosis);
-        hash = 59 * hash + Objects.hashCode(this.ticketPrice);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Ticket other = (Ticket) obj;
-        if (!Objects.equals(this.ticketType, other.ticketType)) {
-            return false;
-        }
-        if (!Objects.equals(this.ticketTypeEkptosi, other.ticketTypeEkptosi)) {
-            return false;
-        }
-        if (!Objects.equals(this.ticketCategoryEkdosis, other.ticketCategoryEkdosis)) {
-            return false;
-        }
-        if (!Objects.equals(this.ticketPrice, other.ticketPrice)) {
-            return false;
-        }
-        if (!Objects.equals(this.ticketId, other.ticketId)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologio, other.dromologio)) {
-            return false;
-        }
-        if (!Objects.equals(this.ticketDateEkdosi, other.ticketDateEkdosi)) {
-            return false;
-        }
-        return true;
-    }
-
+    
     @Override
     public String toString() {
         return "Ticket{" + "ticketId=" + ticketId + ", dromologio=" + dromologio + ", ticketType=" + ticketType + ", ticketTypeEkptosi=" + ticketTypeEkptosi + ", ticketDateEkdosi=" + ticketDateEkdosi + ", ticketCategoryEkdosis=" + ticketCategoryEkdosis + ", ticketPrice=" + ticketPrice + '}';

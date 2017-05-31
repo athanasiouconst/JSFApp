@@ -100,62 +100,7 @@ public class Busdriver  implements java.io.Serializable {
         this.busdriverAddress = busdriverAddress;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.busdriverId);
-        hash = 89 * hash + Objects.hashCode(this.bus);
-        hash = 89 * hash + Objects.hashCode(this.busdriverLastname);
-        hash = 89 * hash + Objects.hashCode(this.busdriverFirstname);
-        hash = 89 * hash + Objects.hashCode(this.busdriverAdt);
-        hash = 89 * hash + this.busdriverAfm;
-        hash = 89 * hash + Objects.hashCode(this.busdriverArithmosDiplomatos);
-        hash = 89 * hash + Objects.hashCode(this.busdriverPhone);
-        hash = 89 * hash + Objects.hashCode(this.busdriverAddress);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Busdriver other = (Busdriver) obj;
-        if (this.busdriverAfm != other.busdriverAfm) {
-            return false;
-        }
-        if (!Objects.equals(this.busdriverLastname, other.busdriverLastname)) {
-            return false;
-        }
-        if (!Objects.equals(this.busdriverFirstname, other.busdriverFirstname)) {
-            return false;
-        }
-        if (!Objects.equals(this.busdriverAdt, other.busdriverAdt)) {
-            return false;
-        }
-        if (!Objects.equals(this.busdriverArithmosDiplomatos, other.busdriverArithmosDiplomatos)) {
-            return false;
-        }
-        if (!Objects.equals(this.busdriverPhone, other.busdriverPhone)) {
-            return false;
-        }
-        if (!Objects.equals(this.busdriverAddress, other.busdriverAddress)) {
-            return false;
-        }
-        if (!Objects.equals(this.busdriverId, other.busdriverId)) {
-            return false;
-        }
-        if (!Objects.equals(this.bus, other.bus)) {
-            return false;
-        }
-        return true;
-    }
+    
 
     @Override
     public String toString() {

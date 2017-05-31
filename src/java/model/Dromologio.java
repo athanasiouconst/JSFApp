@@ -130,70 +130,7 @@ public class Dromologio  implements java.io.Serializable {
         this.demas = demas;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 37 * hash + Objects.hashCode(this.dromologioId);
-        hash = 37 * hash + Objects.hashCode(this.bus);
-        hash = 37 * hash + Objects.hashCode(this.cityByCityIdAnaxorisi);
-        hash = 37 * hash + Objects.hashCode(this.cityByCityIdAfiksi);
-        hash = 37 * hash + Objects.hashCode(this.dromologioDate);
-        hash = 37 * hash + Objects.hashCode(this.dromologioTimeAnaxorisi);
-        hash = 37 * hash + Objects.hashCode(this.dromologioTimeAfiksi);
-        hash = 37 * hash + Objects.hashCode(this.dromologioTypeDromologio);
-        hash = 37 * hash + Objects.hashCode(this.dromologioPrice);
-        hash = 37 * hash + Objects.hashCode(this.tickets);
-        hash = 37 * hash + Objects.hashCode(this.demas);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Dromologio other = (Dromologio) obj;
-        if (!Objects.equals(this.dromologioTypeDromologio, other.dromologioTypeDromologio)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologioPrice, other.dromologioPrice)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologioId, other.dromologioId)) {
-            return false;
-        }
-        if (!Objects.equals(this.bus, other.bus)) {
-            return false;
-        }
-        if (!Objects.equals(this.cityByCityIdAnaxorisi, other.cityByCityIdAnaxorisi)) {
-            return false;
-        }
-        if (!Objects.equals(this.cityByCityIdAfiksi, other.cityByCityIdAfiksi)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologioDate, other.dromologioDate)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologioTimeAnaxorisi, other.dromologioTimeAnaxorisi)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologioTimeAfiksi, other.dromologioTimeAfiksi)) {
-            return false;
-        }
-        if (!Objects.equals(this.tickets, other.tickets)) {
-            return false;
-        }
-        if (!Objects.equals(this.demas, other.demas)) {
-            return false;
-        }
-        return true;
-    }
+    
 
     @Override
     public String toString() {

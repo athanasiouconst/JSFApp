@@ -59,42 +59,7 @@ public class City  implements java.io.Serializable {
         this.dromologiosForCityIdAfiksi = dromologiosForCityIdAfiksi;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 67 * hash + Objects.hashCode(this.cityId);
-        hash = 67 * hash + Objects.hashCode(this.cityName);
-        hash = 67 * hash + Objects.hashCode(this.dromologiosForCityIdAnaxorisi);
-        hash = 67 * hash + Objects.hashCode(this.dromologiosForCityIdAfiksi);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final City other = (City) obj;
-        if (!Objects.equals(this.cityName, other.cityName)) {
-            return false;
-        }
-        if (!Objects.equals(this.cityId, other.cityId)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologiosForCityIdAnaxorisi, other.dromologiosForCityIdAnaxorisi)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologiosForCityIdAfiksi, other.dromologiosForCityIdAfiksi)) {
-            return false;
-        }
-        return true;
-    }
+    
 
     @Override
     public String toString() {

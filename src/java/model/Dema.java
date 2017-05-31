@@ -108,67 +108,7 @@ public class Dema  implements java.io.Serializable {
         this.demaPrice = demaPrice;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.demaId);
-        hash = 17 * hash + Objects.hashCode(this.dromologio);
-        hash = 17 * hash + Objects.hashCode(this.demaDateApostoli);
-        hash = 17 * hash + Objects.hashCode(this.demaLastnameApostolea);
-        hash = 17 * hash + Objects.hashCode(this.demaFirstnameApostolea);
-        hash = 17 * hash + Objects.hashCode(this.demaLastnameParalipti);
-        hash = 17 * hash + Objects.hashCode(this.demaFirstnameParalipti);
-        hash = 17 * hash + this.demaTemaxia;
-        hash = 17 * hash + Objects.hashCode(this.demaBaros);
-        hash = 17 * hash + Objects.hashCode(this.demaPrice);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Dema other = (Dema) obj;
-        if (this.demaTemaxia != other.demaTemaxia) {
-            return false;
-        }
-        if (!Objects.equals(this.demaLastnameApostolea, other.demaLastnameApostolea)) {
-            return false;
-        }
-        if (!Objects.equals(this.demaFirstnameApostolea, other.demaFirstnameApostolea)) {
-            return false;
-        }
-        if (!Objects.equals(this.demaLastnameParalipti, other.demaLastnameParalipti)) {
-            return false;
-        }
-        if (!Objects.equals(this.demaFirstnameParalipti, other.demaFirstnameParalipti)) {
-            return false;
-        }
-        if (!Objects.equals(this.demaBaros, other.demaBaros)) {
-            return false;
-        }
-        if (!Objects.equals(this.demaPrice, other.demaPrice)) {
-            return false;
-        }
-        if (!Objects.equals(this.demaId, other.demaId)) {
-            return false;
-        }
-        if (!Objects.equals(this.dromologio, other.dromologio)) {
-            return false;
-        }
-        if (!Objects.equals(this.demaDateApostoli, other.demaDateApostoli)) {
-            return false;
-        }
-        return true;
-    }
-
+    
     @Override
     public String toString() {
         return "Dema{" + "demaId=" + demaId + ", dromologio=" + dromologio + ", demaDateApostoli=" + demaDateApostoli + ", demaLastnameApostolea=" + demaLastnameApostolea + ", demaFirstnameApostolea=" + demaFirstnameApostolea + ", demaLastnameParalipti=" + demaLastnameParalipti + ", demaFirstnameParalipti=" + demaFirstnameParalipti + ", demaTemaxia=" + demaTemaxia + ", demaBaros=" + demaBaros + ", demaPrice=" + demaPrice + '}';
