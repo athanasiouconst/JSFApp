@@ -23,27 +23,26 @@ import org.hibernate.Session;
  */
 @ManagedBean(name = "rolesManagedBean")
 @ViewScoped
-public class RolesManagedBean implements Serializable{
-    
+public class RolesManagedBean implements Serializable {
+
     private List<Roles> rolesList = new ArrayList();
     private Roles selectedRole; //epilogi apo to pinaka me xeraki
-    private List<Roles> filteredRolesList=new ArrayList();
-    private Roles rolesToInsert=new Roles();
+    private List<Roles> filteredRolesList = new ArrayList();
+    private Roles rolesToInsert = new Roles();
 
     /**
      * Creates a new instance of RolesManagedBean
      */
     public RolesManagedBean() {
-        
-        
+
     }
-    
+
     @PostConstruct
     public void init() {
-        
-       loadTable();
+
+        loadTable();
     }
-    
+
     public void loadTable() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
@@ -52,17 +51,15 @@ public class RolesManagedBean implements Serializable{
             rolesList = session.createCriteria(Roles.class).list();
 
             session.getTransaction().commit();
-            
+
         } catch (Exception e) {
             e.printStackTrace();
             session.getTransaction().rollback();
         }
         session.close();
-        filteredRolesList=rolesList;
+        filteredRolesList = rolesList;
 
     }
-    
-    
 
     public List<Roles> getRoles() {
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -72,7 +69,7 @@ public class RolesManagedBean implements Serializable{
             rolesList = session.createCriteria(Roles.class).list();
 
             session.getTransaction().commit();
-            
+
         } catch (Exception e) {
             e.printStackTrace();
             session.getTransaction().rollback();
@@ -81,48 +78,47 @@ public class RolesManagedBean implements Serializable{
         return rolesList;
 
     }
-    
-    public void insert() throws IOException{
-        
+
+    public void insert() throws IOException {
+
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
             session.beginTransaction();
-            
+
             session.save(rolesToInsert);
 
             session.getTransaction().commit();
-            
+
         } catch (Exception e) {
             e.printStackTrace();
             session.getTransaction().rollback();
         }
         session.close();
-        
+
         FacesContext.getCurrentInstance().getExternalContext().redirect("/JSFApp/roles/ViewRoles.xhtml");
-     
+
     }
-    
-    public void delete() throws IOException{
-        
+
+
+    public void delete() throws IOException {
+
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
             session.beginTransaction();
-            
-           
+
             session.delete(selectedRole);
 
             session.getTransaction().commit();
-            
+
         } catch (Exception e) {
             e.printStackTrace();
             session.getTransaction().rollback();
         }
         session.close();
-        
+
         FacesContext.getCurrentInstance().getExternalContext().redirect("/JSFApp/roles/ViewRoles.xhtml");
-     
+
     }
-    
 
     //getters and setters
     public List<Roles> getRolesList() {
@@ -156,7 +152,8 @@ public class RolesManagedBean implements Serializable{
     public void setRolesToInsert(Roles rolesToInsert) {
         this.rolesToInsert = rolesToInsert;
     }
+
+ 
     
-    
-    
+
 }
