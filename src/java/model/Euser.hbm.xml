@@ -3,7 +3,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 30 ??? 2017 8:37:41 ?? by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="model.Euser" table="euser" catalog="kteldb" optimistic-lock="version">
+    <class name="model.Euser" table="eUser" catalog="kteldb" optimistic-lock="version">
         <id name="euserId" type="java.lang.Integer">
             <column name="eUser_id" />
             <generator class="identity" />
